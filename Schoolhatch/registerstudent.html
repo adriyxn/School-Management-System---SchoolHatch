@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--material icon CDN-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet">
+    
+    <!--font awesome CDN-->
+    <link href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!--link style sheet-->
+    <link rel ="stylesheet" href="./style.css">
+
+
+    <!--link script file-->
+    <script defer src="index.js"></script>
+
+</head>
+<body>
+    <div class="containerregstu">
+        <aside>
+            <!--logo-->
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/mortarboard.png">
+                    <h1 class="primary">SchoolHatch</h1>
+                </div>
+
+                <div class="close">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>
+            <!--menu bar-->
+            <div class="sidebar">
+                <!--Dashboard btn link-->
+                <a href = "dashboard.html" class="active" >
+                    <span class="material-symbols-sharp">dashboard</span>
+                    <h4>Dashboard</h4>
+                </a>
+                <!--Students btn link-->
+                <a href = "students.html">
+                    <span class="material-symbols-sharp">school</span>
+                    <h4>Students</h4>
+                </a>
+
+                <!--Fees btn link-->
+                <a href = "feecollection.html">
+                    <span class="material-symbols-sharp">payments</span>
+                    <h4>Fees</h4>
+                </a>
+
+                <!--Settings btn link-->
+                <a href = "#">
+                    <span class="material-symbols-sharp">settings</span>
+                    <h4>Settings</h4>
+                </a>
+
+                <!--Log out btn link-->
+                <a href = "index.html">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h4>Log Out</h4>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <!--------header section------------>
+            <div class="top">
+                <div class="navigator">
+                    <a href="students.html"><p class="subtext">Students / </p></a>
+                    <a href="#"><p class="primary">Register Student</p></a>
+                </div>
+                <!-------top right section--------->
+                <div class="top-right">
+                    <!----tutorial button--------->
+                    <div class="tutorial-button">
+                        <button> See Tutorial</button>
+                    </div>
+
+                    <!-------notification icon--------->
+                    <div class="notification">
+                        <span class="material-symbols-sharp">notifications</span>
+                    </div>
+        
+                    <!------profile picture -------->
+                    <div class="profile-picture">
+                        <img src="./images/profilepic.webp"/>
+                        <div class="text">
+                            <h5>Maarten Jayasuriya</h5>
+                            <small>Admin</small>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-------page title---------->
+            <div class="pagetitle">
+                <h2 class="primary">Register Student</h2>
+            </div>
+
+            <!-----student personal information section----------->
+            <div class="personalinfo">
+                <div class="personalinfotitle">
+                    <h6 class="primary">Personal Information of the Applicant</h6>
+                    <hr>
+                </div>
+
+            <!--student registraion form-->
+            <form action = "students.html" name = "form" onsubmit = "return studentinfovalidation()">
+                <div class="inputs">
+                    <form>
+                    <div class="names" id="inputgap">
+                        <!------first name input------->
+                        <div class="firstname">
+                            <p class="title">First Name</p>
+                            <input type="text" id = "fname" name="first name" placeholder="First Name" class="reginput">
+                            <div id="errorfname" class="error"></div>
+                        </div>
+
+                        <!------last name input--------->
+                        <div class="lastname">
+                            <p class="title">Last Name</p>
+                            <input type="text" id = "lname" name="last name" placeholder="Last Name" class="reginput">
+                            <div id="errorlname" class="error"></div>
+                        </div>
+                    </div>
+
+                    <div class="dobgender" id="inputgap">
+                        <!--------dob input-------->
+                        <div class="dob">
+                            <p class="title">Date of Birth : </p>
+                            <input type="date" name="date of birth" class="reginput">
+                        </div>
+
+                        <!--------gender input--------->
+                        <div class="gender">
+                            <p class="title">Gender</p>
+                            <input type="radio" name="gender" value="male" class="regradio">Male
+                            <input type="radio" name="gender" value="female">Female
+                        </div>
+                    </div>
+                
+            </div>
+
+            <!--------parent infomation section----------->
+            <div class="parentinfo">
+                <div class="parentinfotitle">
+                    <h6 class="primary">Parent's Information</h6>
+                    <hr class="primary">
+                </div>
+
+                <div class="inputs">
+
+                    <!--father's information-->
+                    <div class="father">
+                        <div class="nameoccupation" id="inputgap">
+                            <!---------father's first name-->
+                            <div class="fathername">
+                                <p class="title">Father's Name</p>
+                                <input type="text" id = "fathername" name="father name" placeholder="Father's Name" class="reginput">
+                                <div id="errorfathername" class="error"></div>
+                            </div>
+
+                            <!--------father's occupation---------->
+                            <div class="occupation">
+                                <p class="title">Father's Occupation</p>
+                                <input type="text" id = "fatheroccupation" name="occupation" placeholder="Father's Occupation" class="reginput">
+                                <div id="errorfatheroccupation" class="error"></div>
+                            </div>
+                        </div>
+
+                        <div class="fathercontact" id="inputgap">
+                            <!---------father's phone number input---------->
+                            <div class="phone">
+                                <p class="title">Father's Phone</p>
+                                <input type="text" id = "fatherphone" name="father phone" placeholder="000-000-0000" class="reginput">
+                                <div id="errorfatherphone" class="error"></div>
+                            </div>
+
+                            <!-----------father's email input----------->
+                            <div class="email">
+                                <p class="title">Father's Email</p>
+                                <input type="text" id = "fatheremail" name="father email" placeholder="example@gmail.com" class="reginput">
+                                <div id="errorfatheremail" class="error"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--maother's informations-->
+                    <div class="mother">
+                        <div class="nameoccupation" id="inputgap">
+                            <!----------mother's name--------->
+                            <div class="mothername">
+                                <p class="title">Mother's Name</p>
+                                <input type="text" id = "mothername" name="mother name" placeholder="Mother's Name" class="reginput">
+                                <div id="errormothername" class="error"></div>
+                            </div>
+
+                            <!----------mother's occupation------------>
+                            <div class="occupation">
+                                <p class="title">Mother's Occupation</p>
+                                <input type="text" id = "motheroccupation" name="occupation" placeholder="Mother's Occupation" class="reginput">
+                                <div id="errormotheroccupation" class="error"></div>
+                            </div>
+                        </div>
+
+                        <div class="mothercontact" id="inputgap">
+                            <!--------mother's phone number input ------------->
+                            <div class="phone">
+                                <p class="title">Mother's Phone</p>
+                                <input type="text" id = "motherphone" name="mother phone" placeholder="000-000-0000" class="reginput">
+                                <div id="errormotherphone" class="error"></div>
+                            </div>
+
+                            <!---------mother's email input--------------->
+                            <div class="email">
+                                <p class="title">Mother's Email</p>
+                                <input type="text" id = "motheremail" name="mother email" placeholder="example@gmail.com" class="reginput">
+                                <div id = "errormotheremail" class = "error"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--address information-->
+            <div class="address">
+                <!--address title-->
+                <div class="addresstitle">
+                    <h6 class="primary">Address</h6>
+                    <hr class="primary">
+                </div>
+
+                <!--address lines-->
+                <div class="addresslines" id="inputgap">
+                    
+                    <!--address line 1-->
+                    <div class="addressline1">
+                        <p class="title">Address Line 1</p>
+                        <input type="text" id = "addline" name="address line 1" placeholder="Address Line 1" class="reginput">
+                        <div id="erroraddressline1" class="error"></div>
+                    </div>
+
+                    <!--address line 2-->
+                    <div class="addressline2">
+                        <p class="title">Address Line 2 <small>(optional)</small></p> 
+                        <input type="text"  name="address line 2" placeholder="Address Line 2" class="reginput">
+                    </div>
+                </div>
+
+                <!--city and postal code information-->
+                <div class="citypostal" id="inputgap">
+                    <!--city information-->
+                    <div class="city">
+                        <p class="title">City</p>
+                        <input type="text" id = "city" name="city" placeholder="City" class="reginput">
+                        <div id = "errorcity" class="error"></div>
+                    </div>
+
+                    <!--postal code information-->
+                    <div class="postalcode">
+                        <p class="title">Postal Code</p>
+                        <input type="text" id = "postalcode" name="postalcode" placeholder="11500" class="reginput">
+                        <div id = "errorpostal" class="error"></div>
+                    </div>
+                </div>
+
+                <!-----------cancel, clear and register buttons------------>
+                <div class="buttons">
+                    <div class="cancelbtn">
+                        <a href="students.html" class="buttoncancel">Cancel</a>
+                    </div>
+
+                    <div class="clearbtn">
+                        <a href="#" type="reset" class="buttonmid">Clear</a>
+                    </div>
+
+                    <div class="registerbtn">
+                        <input type="submit" value="Register" name="register" class="button"/>
+                    </div>
+                </div>
+
+            </form>
+            </div>
+
+        </main>
+    </div>
+    
+</body>
+</html>

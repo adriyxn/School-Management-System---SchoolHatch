@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchoolHatch</title>
+    <!--material icon CDN-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet">
+    
+    <!--font awesome CDN-->
+    <link href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!--link style sheet-->
+    <link rel ="stylesheet" href="./style.css">
+    
+    <!--pie chart-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js"></script>
+
+
+
+</head>
+<body>
+    <div class="containerindex">
+        <aside>
+            <!--logo-->
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/mortarboard.png">
+                    <h1 class="primary">SchoolHatch</h1>
+                </div>
+
+                <div class="close">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>
+            <!--menu bar-->
+            <div class="sidebar">
+                <!--Dashboard btn link-->
+                <a href = "dashboard.html" class="active" >
+                    <span class="material-symbols-sharp">dashboard</span>
+                    <h4>Dashboard</h4>
+                </a>
+                <!--Students btn link-->
+                <a href = "students.html">
+                    <span class="material-symbols-sharp">school</span>
+                    <h4>Students</h4>
+                </a>
+
+                <!--Fees btn link-->
+                <a href = "feecollection.html">
+                    <span class="material-symbols-sharp">payments</span>
+                    <h4>Fees</h4>
+                </a>
+
+                <!--Settings btn link-->
+                <a href = "#">
+                    <span class="material-symbols-sharp">settings</span>
+                    <h4>Settings</h4>
+                </a>
+
+                <!--Log out btn link-->
+                <a href = "index.html">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h4>Log Out</h4>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <div class="top">
+            <h2 class="primary">Dashboard</h2>
+                <div class="search-bar">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <p>Search</p>
+                </div>
+
+                <div class="top-right">
+                    <div class="menu-btn">
+                        <span class="material-symbols-sharp">menu</span>
+                    </div>
+                    <div class="tutorial-button">
+                        <button> See Tutorial</button>
+                    </div>
+
+                    <div class="notification">
+                        <span class="material-symbols-sharp">notifications</span>
+                    </div>
+        
+                    <div class="profile-picture">
+                        <img src="./images/profilepic.webp"/>
+                        <div class="text">
+                            <h5>Maarten Perera</h5>
+                            <small>Admin</small>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            
+           
+            
+
+            <div class="insights">
+                <!--Total students insights-->
+                <div class="students">
+                    <div class="left">
+                        <span class="material-symbols-sharp">groups</span>    
+                    </div>
+
+                    <div class="right">
+                        <h3 class="primary">Total Students</h3>
+                        <h3 class="subtext">2430</h3>
+                    </div>
+                </div>
+
+                <!--Total teachers insights-->
+                <div class="teachers" class="active">
+                    <div class="left">
+                        <span><i class="fa-solid fa-chalkboard-user"></i></span>
+                    </div>
+
+                    <div class="right">
+                        <h3 class="primary">Total Teachers</h3>
+                        <h3 class="subtext">239</h3>
+                    </div>
+                </div>
+
+                <!--Absent students insights-->
+                <div class="absent-students">
+                    <div class="left">
+                        <span class="material-symbols-sharp">table_restaurant</span>   
+                    </div>
+
+                    <div class="right">
+                        <h3 class="primary">Absent Students</h3>
+                        <h3 class="subtext">342</h3>
+                    </div>
+                </div>
+
+                <!--Total revenue insights-->
+                <div class="totalRevenue">
+                    <div class="left">
+                        <span ><i class="fa-solid fa-coins"></i></span>    
+                    </div>
+
+                    <div class="right">
+                        <h3 class="primary">Total Revenue</h3>
+                        <h3 class="subtext">LKR 2, 345, 342</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Students count and pendings fees table-->
+            <div class="middle-part">
+                <!--student count-->
+                <div class="student-count-gender">
+
+                    <div class="piechart">
+                        <div class="studentcounttitle">
+                            <h3 class="title">Students</h3>
+                            <div class="classfilter">
+                                <select name="class" class="filter">
+                                    <option value="9A">9A</option>
+                                    <option value="9B">9A</option>
+                                    <option value="9C">9C</option>
+                                </select>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+
+                        <canvas id="genderstudentcount" style="width: 240px; height: 200px; border-radius: var(--chart-border-radius); padding: var(--card-padding);">
+                        
+                        </canvas>
+                          
+                    </div>
+                    
+                    <div id="piechart_3d">
+
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                        <script>
+                            const labelsGen = ['Boys', 'Girls'];
+                        
+                            const dataGen = {
+                                labels: labelsGen,
+                                datasets: [
+                                    {
+                                        label: 'Gender Count',
+                                        backgroundColor: ['rgb(0, 122, 190)', 'rgb(250, 0, 255)'],
+                                        borderColor: ['rgb(0, 122, 190)', 'rgb(250, 0, 255)'],
+                                        data: [34, 12],
+                                    },
+                                ],
+                            };
+                        
+                            const configGen = {
+                                type: 'pie',
+                                data: dataGen,
+                                options: {
+                                    plugins: {
+                                        legend: {
+                                            labels: {
+                                                color: 'black', // Color of the legend text
+                                            },
+                                            onRenderLabel: function (context) {
+                                                const index = context.dataIndex;
+                                                const backgroundColors = ['rgb(0, 122, 190)', 'rgb(255, 99, 132)'];
+                                                const labelColor = 'black'; // Color of the legend text
+                        
+                                                const label = context.label;
+                                                const value = context.chart.data.datasets[0].data[index];
+                                                const backgroundColor = backgroundColors[index % backgroundColors.length];
+                        
+                                                return `
+                                                    <div style="display: flex; align-items: center;">
+                                                        <div style="width: 10px; height: 10px; background-color: ${backgroundColor}; margin-right: 5px;"></div>
+                                                        <span style="color: ${labelColor};">${label}: ${value}</span>
+                                                    </div>
+                                                `;
+                                            },
+                                        },
+                                    },
+                                },
+                            };
+                        
+                            //rendering chart
+                            var gendercountChart = new Chart(
+                                document.getElementById('genderstudentcount'),
+                                configGen
+                            );
+                        </script>
+                        
+                        
+
+                    </div>
+                </div>
+
+                <!--pending fees student details-->
+                <div class="pending-fees">
+                    <h3 class="title">Pending Fees</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="title">Name</th>
+                                <th class="title">Class</th>
+                                <th class="title">Phone</th>
+                                <th class="title">Due Amount</th>
+                                <th class="title">Due Date</th>
+                                <th class="title">Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Budhdhima Arambepola</td>
+                                <td>9 A</td>
+                                <td>077 43 84 645</td>
+                                <td>LKR 15, 000</td>
+                                <td>12/04/2023</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Dilhan Perera</td>
+                                <td>10 B</td>
+                                <td>076 34 82 921</td>
+                                <td>LKR 15, 000</td>
+                                <td>12/04/2023</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Adriyan Jayasuriya</td>
+                                <td>12 D</td>
+                                <td>071 32 82 231</td>
+                                <td>LKR 20, 000</td>
+                                <td>12/04/2023</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Pruthivi Chamath</td>
+                                <td>4 D</td>
+                                <td>076 34 28 921</td>
+                                <td>LKR 10, 000</td>
+                                <td>22/03/2023</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Kawya Gangadari</td>
+                                <td>9 A</td>
+                                <td>077 32 28 921</td>
+                                <td>LKR 15, 000</td>
+                                <td>12/04/2023</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <!--diagrams of earnings and registrations-->
+            <div class="diagrams">
+                <div class="earnings">
+                    <h3>Earnings</h3>
+                    <div>
+                        <canvas id="earningsChart" style=" width: 560px; height: 230px; border-radius: var(--chart-border-radius); padding:var(--card-padding);"></canvas>
+                      </div>
+
+                      <!--chart js library set up-->
+                      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                      <script>
+                    
+                        const labels = [
+                        '01',
+                        '06',
+                        '12',
+                        '18',
+                        '24',
+                        '30',
+                        ];
+
+                        const data = {
+                            labels: labels,
+                            datasets: [{
+                                label: 'Recieved Fees',
+                                backgroundColor: 'rgb(0, 122, 190)',
+                                borderColor: 'rgb(0, 122, 190)',
+                                data:[19000, 47000, 62000, 98000, 18000, 21000],
+                            },{
+                                label: 'Pending Fees',
+                                backgroundColor: 'rgb(250, 0, 255)',
+                                borderColor: 'rgb(250, 0, 255)',
+                                data:[25000, 59000, 42000, 61000, 79000, 43000],
+                            }]
+                        };
+
+                        const config = {
+                            type: 'line',
+                            data,
+                            options: {}
+                        };
+
+                        //rendering chart
+                        var earningsChart = new Chart(
+                            document.getElementById('earningsChart'),
+                            config
+                        );
+                      </script>
+                </div>
+
+
+                <!--Registration Chart-->
+                <div class="registrations">
+                    <div>
+                        <h3>Registrations</h3>
+                        <canvas id="registrationsChart" style="width: 560px; height: 230px; border-radius: var(--chart-border-radius); padding: var(--card-padding);"></canvas>
+                      </div>
+
+                      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                      <script>
+                    
+                        const labelsReg = [
+                        '2019',
+                        '2020',
+                        '2021',
+                        '2022',
+                        '2023',
+                        ];
+
+                        const dataReg = {
+                            labels: labelsReg,
+                            datasets: [{
+                                backgroundColor: 'rgb(0, 122, 190)',
+                                borderColor: 'rgb(0, 122, 190)',
+                                data:[380, 550, 1038, 801, 1289],
+                            }]
+                        };
+
+                        const configReg = {
+                            type: 'bar',
+                            data: dataReg,
+                            options: {}
+                        };
+
+                        //rendering chart
+                        var registrationsChart = new Chart(
+                            document.getElementById('registrationsChart'),
+                            configReg
+                        );
+                      </script>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

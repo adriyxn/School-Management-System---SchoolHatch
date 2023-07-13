@@ -1,0 +1,1615 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --color-primary: #007ABE;
+    --color-white: #F9F9F9;
+    --color-darkgray : #898989;
+    --color-lightgray : #D6D6D6;
+    --color-lightblue : #D7F1FF;
+    --color-primaryblack : #434343;
+    --color-subgray : #B6B6B6;
+    --color-secondaryblue :#87D4FF;
+
+    --color-fullypaid: #CFFFBE;
+    --color-partiallypaid: #BEEFFF;
+    --color-notpaid: #FFBEBE;
+
+    --color-fullypaidtext: #004C0C;
+    --color-partiallypaidtext: #001767;
+    --color-notpaidtext: #5F0000;
+
+    --card-border-radius : 2rem;
+    --chart-border-radius: 15px;
+    --textbox-border-radius : 0.3rem;
+
+    --card-padding : 1.8rem;
+    --box-shadow: 0 1rem 1rem var(--color-subgray);
+
+}
+
+*{
+    margin:0;
+    padding: 0;
+    outline:0;
+    appearance: none;
+    border:0;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins,sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-lightblue);
+    overflow-x: hidden;
+    user-select: none;
+
+}
+
+.containerindex{
+    display: grid;
+    height: 100vh;
+    background-color: var(--color-lightblue);
+    grid-template-columns: 300px auto;
+    gap: 20px;
+}
+
+.close{
+    display: none;
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-size: 35px;
+}
+
+h2{
+    font-size: 25px;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h5{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+h6{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+small{
+    font: size 18px;;
+}
+
+.profile-photo{
+    width: 71px;
+    height: 71px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: var(--color-darkgray);
+}
+
+p{
+
+}
+
+.primary{
+    color: var(--color-primary);
+}
+
+.title{
+    color: var(--color-primaryblack);
+}
+
+.info{
+    color: var(--color-subgray);
+}
+
+.subtext{
+    color:var(--color-darkgray);
+}
+
+.secondaryblue{
+    color: var(--color-secondaryblue);
+}
+
+.active{
+    color: var(--color-primary);
+}
+
+.button{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 12px;
+    height: 45px;
+    width: 186px;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+.buttoncancel{
+    background-color: var(--color-subgray);
+    color: var(--color-primaryblack);
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+.buttonmid{
+    background-color: var(--color-darkgray);
+    color: var(--color-white);
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+.containerStudents main .filters i{
+    margin-left: 0px;
+}
+
+.filter{
+    background-color: var(--color-white);
+    padding: 10px 30px;
+    border-radius: 5px;
+    width: 100px;
+    border: 0.5px solid var(--color-lightgray);
+}
+
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.error {
+    color: #ff3860;
+    font-size: 11px;
+    height: 13px;
+}
+
+
+.top .menu-btn{
+    display: none;
+}
+
+aside{
+    height: 100vh;
+    background-color: var(--color-white);
+    width: 300px;
+    margin-left: -30px;
+}
+
+aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-left: 70px;
+    width: 50%;
+    padding: 10px;
+}
+
+aside .logo img{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+}
+
+
+aside .sidebar{
+    flex-direction: column;
+    position: relative;
+    height: 40vh;
+    margin: auto;
+    justify-content: center;
+    top: 40px;
+    gap: 40px;
+    padding-left: 50px;
+}
+
+aside .sidebar a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    color: var(--color-darkgray);
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: -15rem;
+    width: 100%;
+}
+
+aside .close{
+    position:absolute;
+    margin-top: -60px;
+    margin-left: 220px;
+}
+aside .sidebar a.active{
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+
+.containerindex main{
+    margin-top: 10px;
+}
+
+aside .sidebar a:hover{
+    color: var(--color-primary);
+}
+
+
+main{
+    margin-left: -10px;
+    overflow-x: auto;
+}
+main .top{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 10px 20px;
+    width: 1130px;
+    border-radius: 20px;
+    margin: 0;
+}
+
+main .top .top-right .menu-btn{
+    display: none;
+}
+
+main .top .top-right{
+    margin-left: 200px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+main .top .search-bar{
+    display: flex;
+    margin-left: 40px;
+    padding: 10px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-subgray);
+    width: 300px;
+    align-items: center;
+    border-radius: var(--card-border-radius);
+    color: var(--color-subgray);
+    text-indent: 5px;
+}
+
+main .top .search-bar p{
+    margin-left: 10px;
+}
+
+main .tutorial-button  button{
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    width: 120px;
+    align-items: center;
+    color: var(--color-white);
+}
+
+
+main .profile-picture{
+    display: flex;
+    width: 300px;
+    gap: 20px;
+    font-size: 16px;
+    align-items: center;
+}
+
+main .profile-picture img{
+    width: 50px;
+    height: 50px;
+    border-radius: 500px;
+    object-fit: cover;
+}
+
+main .insights{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    display: flex;
+    height: 100px;
+}
+
+main .insights span {
+    color: var(--color-primary);
+    font-size: 50px;
+}
+
+main .insights h3{
+    margin-left: 30px;
+}
+
+main .students{
+    display: flex;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    margin-top: 10px;
+    padding: var(--card-padding);
+    align-items: center;
+}
+
+main .students:hover{
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .teachers{
+    display: flex;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    margin-top: 10px;
+    padding: var(--card-padding);
+    align-items: center;
+}
+
+main .teachers:hover{
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .absent-students{
+    display: flex;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    margin-top: 10px;
+    padding: var(--card-padding);
+    align-items: center;
+}
+
+main .absent-students:hover{
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .insights .students > div{
+    margin-top: 10px;
+}
+
+main .insights .teachers > div{
+    margin-top: 10px;
+}
+
+main .insights .absent-students > div{
+    margin-top: 10px;
+}
+
+main .insights .totalRevenue > div{
+    margin-top: 10px;
+}
+
+main .totalRevenue{
+    display: flex;
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    margin-top: 10px;
+    padding: var(--card-padding);
+    align-items: center;
+}
+
+main .totalRevenue:hover{
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+
+/*styling for students card*/
+main .middle-part{
+    display: flex;
+    align-items: center;
+}
+main .middle-part .student-count-gender{
+    margin-top: -35px;
+}
+
+main .middle-part .student-count-gender .studentcounttitle{
+    display: flex;
+    gap: 50px;
+    margin-top: 45px;
+    padding-top: 20px;
+}
+main .middle-part .student-count-gender .studentcounttitle select{
+    height: 40px;
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: -5px;
+}
+
+main .middle-part .student-count-gender .top{
+    display: flex;
+}
+
+main .middle-part .student-count-gender .diagram{
+    display: flex;
+}
+
+
+main .middle-part .student-count-gender .piechart{
+    color: var(--color-primaryblack);
+    background-color: var(--color-white);
+    border-radius: var(--chart-border-radius);
+    padding-left: 20px;
+    padding-right: 5px;
+    width: 265px;
+
+}
+
+
+/*styling for table*/
+main .middle-part .pending-fees{
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: var(--color-white);
+    border-radius: var(--chart-border-radius);
+    padding-top: 20px;
+    padding-left: 20px;
+
+}
+
+
+main .middle-part .pending-fees table{
+    text-align: left;
+    transition: all 300ms ease;
+    width: 805px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+main table tbody td{
+    height: 30px;
+    color: var(--color-darkgray);
+}
+
+main table tbody tr:last-child{
+    border: none;
+}
+
+main .diagrams {
+    display: flex;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+
+main .diagrams .earnings{
+    color: var(--color-primaryblack);
+    background-color: var(--color-white);
+    border-radius: var(--chart-border-radius);
+    padding-top:15px;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+main .diagrams .earnings canvas{
+    margin-top: -10px;
+    margin-left: -25px;
+    
+}
+
+main .diagrams .registrations h3{
+    color: var(--color-primaryblack);
+}
+
+main .diagrams .registrations {
+    color: var(--color-primaryblack);
+    background-color: var(--color-white);
+    border-radius: var(--chart-border-radius);
+    padding-top:15px;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+main .diagrams .registrations canvas{
+    margin-top: 10px;
+    margin-left: -25px;
+}
+
+/* styling for log in  page*/
+.container{
+    display: grid;
+    height: 100vh;
+    margin: auto;
+    background-color: var(--color-white);
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: 
+    "left"
+    "right";
+    gap: 20px;
+}
+.container .left-login{
+    align-items: center;
+    justify-content: center;
+    grid-area: left;
+    
+}
+.container form{
+    margin: auto;
+    padding: 30px;
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.container form h2{
+    margin-left: 45px;
+}
+
+.container .left-login .logo{
+    display: flex;
+    align-items:center;
+    margin-left: -200px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.container .left-login .logo img{
+    width: 80px;
+}
+
+.container .left-login .inputs{
+    margin-left: 45px;
+}
+
+.container .left-login .inputs .email{
+    margin-top: 20px;
+}
+
+.container .left-login .inputs .password{
+    margin-top: 20px;
+}
+
+.container .left-login input{
+    border: 2px solid #D6D6D6;
+    height: 50px;
+    width: 330px;
+    color: var(--color-primaryblack);
+    border-radius: 5px;
+    text-indent: 10px;
+}
+.container .left-login .options input{
+    width: 20px;
+    height: 20px;
+    border-color: var(--color-darkgray);
+}
+.container .left-login .options label{
+    margin-left: 20px;
+}
+.container .left-login .options{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    margin-left: 15px;
+}
+
+.container .left-login .options .rememberMe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .left-login .login{
+    margin-left: 45px;
+}
+
+.container .left-login .login input{
+    color: var(--color-white);
+    margin-top: 20px;
+    border-color: var(--color-primary);
+}
+
+.container .left-login .register-redirect{
+    margin-top: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .left-login a:last-child{
+    margin-left: 10px;
+}
+
+.container .right img{
+    width: 900px;
+    padding: 30px;
+}
+
+
+/*styling for register page */
+
+.container .form-register{
+    margin: auto;
+    padding: 30px;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.container .left-login .logo-register{
+    display: flex;
+    align-items:center;
+    margin-left: -400px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.container .left-login .logo-register img{
+    width: 80px;
+}
+.container .form-register h2{
+    margin-left: 0px;
+}
+
+.container .form-register input{
+    width: 250px;
+    text-indent: 10px;
+}
+
+.container .name{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.container .contact{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.container .passwords{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.container .form-register .register input{
+    margin-top: 20px;
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    width: 525px;
+    font-size: 16px;
+}
+.submit-button{
+    background-color: var(--color-primary);
+}
+
+.container .form-register .register input{
+    width: 525px;
+    font-size: 14px;
+}
+
+
+.container .form-register .login-redirect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+a:link{
+    text-decoration: none;
+}
+.container .right-register{
+    width: 800px;
+}
+
+/*styling for students page */
+.containerStudents{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 300px auto;
+    grid-template-areas: 
+    "left"
+    "right";
+    gap: 20px;
+}
+
+.containerStudents main .top{
+    margin-top: 10px;
+}
+
+.containerStudents main .top .search-bar{
+    margin:0;
+    margin-left: 20px;
+}
+
+.containerStudents main .top .top-right{
+    margin-left: 270px;
+}
+
+main .filters{
+    margin-top: 10px;
+    background-color: var(--color-white);
+    padding: 10px 10px;
+    border-radius:20px;
+    width: 1150px;
+    align-items: center;
+    justify-content: center;
+}
+
+main .top .pagetitle{
+    margin-left: 15px;
+}
+
+main .filters .navigator{
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+main .filters .navigator h4{
+    font-size: small;
+}
+
+main .filters .filter-bar{
+    display: flex;
+    align-items:last baseline;
+    gap: 50px;
+    margin-top: -20px;
+}
+
+main .filters .filter-bar .filters{
+    display: flex;
+    gap: 20px;
+    align-items:last baseline;
+}
+
+main .filters .filter-bar .searchBar{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-subgray);
+    border: 1px solid var(--color-subgray);
+    padding: 10px;
+    width: 300px;
+    height: 20px;
+    border-radius: var(--card-border-radius);
+    text-indent: 5px;
+    gap: 5px;
+    margin-left: 25px;
+
+}
+
+main .filters .filter-bar .searchBarfees{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-subgray);
+    border: 1px solid var(--color-subgray);
+    padding: 10px;
+    width: 500px;
+    height: 20px;
+    border-radius: var(--card-border-radius);
+    text-indent: 5px;
+    gap: 5px;
+    margin-left: 25px;
+
+}
+
+
+main .filters .filter-bar .searchBar p{
+    font-size: 12px;
+}
+
+main .filters .filter-bar .registerStudent{
+    margin-left: 40px;
+}
+
+main .filters .filter-bar .registerStudent a{
+    margin-left: 35px;
+}
+
+main .results{
+    margin-top: 15px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+main .pagination{
+    display: flex;
+    gap: 50px;
+    margin-top: 15px;
+    margin-left: 700px;
+    align-items: center;
+}
+
+main .pagination .pages{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+
+}
+
+main .pagination .pages .active{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+main .pagination .pages .subtext:hover{
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+main .pagination .gotopage{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+main .pagination .gotopage .go{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+}
+
+main .pagination .gotopage input{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-white);
+}
+
+.containerStudents .studenttable table{
+    width: 97%;
+}
+.table{
+    background-color: var(--color-white);
+    border-radius: var(--chart-border-radius);
+    padding: var(--card-padding);
+    text-align: left;
+    transition: all 300ms ease;
+    width: 93.8%;
+    margin-top: 10px;
+}
+
+main table tbody td{
+    height: 30px;
+    padding-top: 10px;
+    color: var(--color-darkgray);
+}
+
+main table input{
+    width: 14px;
+    height: 14px;
+    border: 2px solid #bcbcbc;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#selectall{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*styling for register student page */
+.containerregstu{
+    display: grid;
+    height: 100vh;
+    width: 1540px;
+    background-color: var(--color-white);
+    grid-template-columns: 300px auto;
+    grid-template-areas: 
+    "left"
+    "right";
+    gap: 20px;
+}
+.containerregstu form{
+    width: 900px;
+}
+
+
+.containerregstu main{
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.containerregstu main .top .navigator{
+    display: flex;
+    width: 300px;
+    margin-left: -20px;
+}
+
+.containerregstu main .top .top-right{
+    margin-left: 450px;
+}
+
+
+.containerregstu main .personalinfo .personalinfotitle{
+    margin-top: 10px;
+}
+
+.containerregstu main hr{
+    height: 1px;
+    width: 1180px;
+    border-width: 0;
+    background-color: var(--color-primary);
+}
+
+.reginput {
+    border: 2px solid #D6D6D6;
+    height: 50px;
+    width: 500px;
+    color: var(--color-primaryblack);
+    border-radius: 5px;
+    text-indent: 10px;
+}
+
+
+.containerregstu main .personalinfo .inputs .father{
+    margin-top: 20px;
+}
+
+.containerregstu main form .inputs .dobgender .gender input[type="radio"]{
+    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Create a custom radio button */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #999;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+
+.containerregstu main form .inputs .dobgender .gender input[type="radio"]:checked{
+    /* Change the border color when the radio button is checked */
+  border-color: #007bff;
+  background-color: #007bff;
+}
+
+.containerregstu main .parentinfo{
+    margin-top: 40px;
+}
+
+
+#inputgap{
+    display: flex;
+    gap: 180px;
+    margin-top: 20px;
+}
+
+.containerregstu main .address{
+    margin-top: 40px;
+}
+
+.containerregstu main .buttons{
+    display: flex;
+    gap: 87px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.containerregstu main .buttons a{
+    padding: 15px 146.5px;
+}
+
+.containerregstu main .buttons .registerbtn input{
+    width: 350px;
+    margin-top: -30px;
+}
+
+
+/* stylings for fee collection page */
+
+
+.fullypaid{
+    background-color:var(--color-fullypaid);
+    color: #004C0C;
+    padding: 4px 6px;
+    width: 80px;
+    text-indent: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.partiallypaid{
+    background-color: var(--color-partiallypaid);
+    color: var(--color-partiallypaidtext);
+    width: 80px;
+    padding: 4px 6px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.notpaid{
+    background-color: var(--color-notpaid);
+    color: var(--color-notpaidtext);
+    padding: 4px 6px;
+    width: 80px;
+    text-indent: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+main .filters .payMethodFilter select{
+    width: 150px;
+}
+
+.containerStudents .feetable{
+    width: 102%;
+}
+/* media queire */
+@media screen and (max-width:600px){
+    
+    aside{
+        display: none;
+    }
+    main .tutorial-button  button{
+        padding: 7px 20px;
+        font-size: 12px;
+    }
+
+    main .profile-picture img{
+        width: 40px;
+        height: 40px;
+    }
+
+    main .profile-picture h5{
+        display: none;
+    }
+
+    main .profile-picture small{
+        display: none;
+    }
+
+
+    /*tables*/
+    main .middle-part .pending-fees{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    
+    
+    main .middle-part .pending-fees table{
+        background-color: var(--color-white);
+        border-radius: var(--chart-border-radius);
+        padding: var(--card-padding);
+        text-align: left;
+        transition: all 300ms ease;
+        width: 157%;
+    }
+    
+    main .middle-part .pending-fees table:hover{
+        box-shadow: var(--box-shadow);
+    }
+    
+    main table tbody td{
+        height: 30px;
+        color: var(--color-darkgray);
+    }
+    
+    main table tbody tr:last-child{
+        border: none;
+    }
+    
+    main .diagrams {
+        display: flex;
+        gap: 20px;
+        padding-top: 10px;
+    }
+    
+    main .diagrams .earnings{
+        color: var(--color-primaryblack);
+    }
+    
+    main .diagrams .earnings canvas{
+        margin-top: 10px;
+    }
+    
+    main .diagrams .registrations h3{
+        color: var(--color-primaryblack);
+    }
+    main .diagrams .registrations canvas{
+        margin-top: 10px;
+    }
+    /* login page CSS styles for small screens */
+    .container form{
+        margin-left: -20px;
+        width: 340px;
+        margin-top: 30px;
+    }
+    
+    
+    .container .left-login .logo{
+        margin-left: -30px;
+        margin-top: 50px;
+        gap: 10px;
+    }
+    
+    .container .left-login .logo img{
+        width: 40px;
+    }
+    
+    .container .left-login input{
+        height: 40px;
+        width: 250px;
+    }
+    .container .left-login .options{
+        margin-top: 10px;
+        gap: 15px;
+        margin-left: 0px;
+    }
+    
+    .container .left-login .options .rememberMe{
+        font-size: 10px;
+    }
+
+    .container .left-login .options .forgot-password{
+        font-size: 10px;
+    }
+    
+    .container .left-login button{
+        padding: 10px 107px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    
+    .container .left-login .register-redirect{
+        font-size: 12px;
+    }
+    
+    .container .right img{
+        display:none;
+    }
+
+
+
+    /* register page CSS styles for small screens */
+
+    .container {
+        height: 800px;
+    }
+    .container .form-register{
+        margin-left: 25px;
+        width: 270px;
+        height: 700px;
+        margin-top: -20px;
+    }
+
+    .container .left-login .logo-register{
+        margin-left: -30px;
+        margin-top: 15px;
+    }
+
+    .container .left-login .logo-register img{
+        width: 40px;
+    }
+    .container .form-register h2{
+        margin-left: 70px;
+    }
+
+    .container .form-register input{
+        height: 40px;
+        width: 250px;
+    }
+
+    .container .name{
+        display:block;
+    }
+
+    .container .left-login form .name .lname{
+        margin-top: 10px;
+    }
+
+    .container .contact{
+        display: block;
+    }
+
+    .container .left-login form .contact .phone{
+        margin-top: 10px;
+    }
+
+    .container .passwords{
+        display: block;
+    }
+
+    .container .left-login form .passwords .conpassword{
+        margin-top: 10px;
+    }
+    
+
+    .container .form-register .register input{
+        width: 253px;
+        font-size: 14px;
+    }
+
+    .container .form-register .login-redirect{
+        margin-top: 20px;
+        margin-left: -30px;
+    }
+
+    .container .right-register{
+        display: none;
+    }
+
+
+    /*mobile stylings for register student page*/
+    .containerregstu aside{
+        display: none;
+    }
+    
+    .containerregstu{
+        display: grid;
+        height: 100vh;
+        width: auto;
+    }
+    
+    .containerregstu main{
+        margin-top: 20px;
+        overflow-x: auto;
+        width: 400px;
+    }
+    
+    .containerregstu main .top .navigator{
+        display: flex;
+        width: 300px;
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+    
+    .containerregstu main .top .top-right{
+        margin-left: -220px;
+        margin-top: -20px;
+    }
+    
+        
+    main .pagetitle h2{
+        margin-left: 30px;
+        font-size: 20px;
+    }
+    
+    .containerregstu main .personalinfo .personalinfotitle{
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+    
+    .containerregstu main hr{
+        width: 320px;
+    }
+    
+    .reginput {
+        border: 2px solid #D6D6D6;
+        height: 40px;
+        width: 150px;
+        color: var(--color-primaryblack);
+        border-radius: 5px;
+        text-indent: 10px;
+    }
+    
+    .containerregstu main .personalinfo .names{
+        margin-left: 30px;
+    }
+
+    .containerregstu main .personalinfo .dobgender{
+        margin-left: 30px;
+    }
+    
+    .containerregstu main .personalinfo .inputs .father{
+        margin-top: 20px;
+    }
+    
+    .containerregstu main .parentinfo{
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+    
+    #inputgap{
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .containerregstu main .address{
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+    
+    .containerregstu main .buttons{
+        display: flex;
+        gap: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .containerregstu main .buttons a{
+        padding: 10px 30px;
+    }
+
+
+    /*mobile stylings for students page*/
+    .containerStudents{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 300px auto;
+    grid-template-areas: 
+    "left"
+    "right";
+    gap: 20px;
+}
+    .containerStudents main{
+        width: 370px;
+    }
+
+.containerStudents main .top{
+    margin-top: 10px;
+    margin-left: -200px;
+}
+
+.containerStudents main .top .search-bar{
+    margin:0;
+    margin-left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+main span{
+    font-size: 20px;
+    margin-left: -10px;
+}
+
+.top .menu-btn{
+    display: block;
+    margin-left: 20px;
+}
+
+.containerStudents main .top .search-bar p{
+    display: none;
+}
+
+.containerStudents main .top .top-right{
+    margin-left: 0;
+}
+
+.containerStudents main .top .tutorial-button{
+    display: none;
+}
+
+main .filters{
+    margin-top: 10px;
+    background-color: var(--color-white);
+    padding: 10px 10px;
+    border-radius:20px;
+    width: 1150px;
+    align-items: center;
+    justify-content: center;
+}
+
+main .top .pagetitle{
+    margin-left: 0;
+}
+
+main .filters .navigator{
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+main .filters .navigator h4{
+    font-size: small;
+}
+
+main .filters .filter-bar{
+    display: flex;
+    align-items:last baseline;
+    gap: 50px;
+    margin-top: -20px;
+}
+
+main .filters .filter-bar .filters{
+    display: flex;
+    gap: 20px;
+    align-items:last baseline;
+}
+
+main .filters .filter-bar .searchBar{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-subgray);
+    border: 1px solid var(--color-subgray);
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--card-border-radius);
+    text-indent: 5px;
+    gap: 5px;
+    margin-left: 25px;
+
+}
+
+main .filters .filter-bar .searchBarfees{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-subgray);
+    border: 1px solid var(--color-subgray);
+    padding: 10px;
+    width: 500px;
+    height: 20px;
+    border-radius: var(--card-border-radius);
+    text-indent: 5px;
+    gap: 5px;
+    margin-left: 25px;
+
+}
+
+
+main .filters .filter-bar .searchBar p{
+    display: none;
+}
+
+main .filters .filter-bar .registerStudent{
+    margin-left: 40px;
+}
+
+main .filters .filter-bar .registerStudent a{
+    margin-left: 35px;
+}
+
+main .results{
+    margin-top: 15px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+main .pagination{
+    display: flex;
+    gap: 50px;
+    margin-top: 15px;
+    margin-left: 700px;
+    align-items: center;
+}
+
+main .pagination .pages{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+
+}
+
+main .pagination .pages .active{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+main .pagination .pages .subtext:hover{
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+main .pagination .gotopage{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+main .pagination .gotopage .go{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+}
+
+main .pagination .gotopage input{
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-white);
+}
+
+.containerStudents .studenttable table{
+    width: 97%;
+}
+main table{
+    background-color: var(--color-white);
+    border-radius: var(--chart-border-radius);
+    padding: var(--card-padding);
+    text-align: left;
+    transition: all 300ms ease;
+    width: 93.8%;
+    margin-top: 10px;
+}
+
+main table tbody td{
+    height: 30px;
+    padding-top: 10px;
+    color: var(--color-darkgray);
+}
+
+main table input{
+    width: 14px;
+    height: 14px;
+    border: 2px solid #bcbcbc;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#selectall{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}

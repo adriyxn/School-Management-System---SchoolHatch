@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <!--material icon CDN-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet">
+    
+    <!--font awesome CDN-->
+    <link href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!--link style sheet-->
+    <link rel ="stylesheet" href="./style.css">
+
+    <!--link script file-->
+    <script defer src="index.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="left-login">
+            <!-----------logo--------------->
+            <div class="logo-register">
+                <img src="./images/mortarboard.png"/>
+                <h3 class="primary">SchoolHatch</h3>
+            </div>
+
+            <!---------------register form------------------->
+            <form  action = "index.html" name = "form" class = "form-register" onsubmit = "return registervalidation()">
+                <h2 class="primary">Register</h2>
+
+            <div class="name">
+                <!---------first name input----------->
+                <div class="fname">
+                    <p>First Name</p>
+                    <input type="text" id = "fname" placeholder="Enter your first name" name="first name">
+                    <div id="errorfname" class="error"></div>
+                </div>
+
+                <!-------------last name input ------------------>
+                <div class="lname">
+                    <p>Last Name</p>
+                    <input type="text" id='lname' placeholder="Enter your last name" name="last name">
+                    <div id="errorlname" class="error"></div>
+                </div>
+            </div>
+
+            <div class="contact">
+                <!-----------------email input-------------------->
+                <div class="email">
+                    <p>Email</p>
+                    <input type="text" id = 'email' name="email" placeholder="example@gmail.com">
+                    <div id="erroremail" class="error"></div>
+                </div>
+
+                <!---------------phone number input--------------->
+                <div class="phone">
+                    <p>Phone</p>
+                    <input type="text" id="phone" name="phone number" placeholder="000-000-0000">
+                    <div id="errorphone" class="error"></div>
+                </div>
+            </div>
+
+            <div class="passwords">
+                <!----------------password input---------------->
+                <div class="password">
+                    <p>Password</p>
+                    <input type="password" id="password" placeholder=""name="password" >
+                    <div id="errorpassword" class="error"></div>
+                </div>
+
+                <!-----------confirm password input---------------->
+                <div class="conpassword">
+                    <p>Confirm Password</p>
+                    <input type="password" id="conpassword" name="confirm password">
+                    <div id="errorconpassword" class="error"></div>
+                </div>
+            </div>
+
+            <div class="register">
+                <!----------------create account/register button------------>
+                <input class="submit-button" type="submit" value="Create Account" />
+            </div>
+            
+
+            <div class="login-redirect">
+                <!----------redirect to login form------------->
+                <p class="subtext">Already have an account?</p>
+                <a class="primary" href="index.html">Log In</a>
+            </div>
+
+        </form>
+
+        </div>
+
+        <!-----------the image on the right side---------------->
+        <div class="right-register">
+            <img src="./images/kerfin7_nea_2726.png">
+        </div>
+    </div>
+</body>
+</html>

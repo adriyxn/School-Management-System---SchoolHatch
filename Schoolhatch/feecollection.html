@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fees</title>
+
+    <!--material icon CDN-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet">
+    
+    <!--font awesome CDN-->
+    <link href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!--link style sheet-->
+    <link rel ="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="containerStudents">
+        <aside>
+            <!--logo-->
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/mortarboard.png">
+                    <h1 class="primary">SchoolHatch</h1>
+                </div>
+
+                <div class="close">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>
+            <!--menu bar-->
+            <div class="sidebar">
+                <!--Dashboard btn link-->
+                <a href = "dashboard.html">
+                    <span class="material-symbols-sharp">dashboard</span>
+                    <h4>Dashboard</h4>
+                </a>
+                <!--Students btn link-->
+                <a href = "students.html" >
+                    <span class="material-symbols-sharp">school</span>
+                    <h4>Students</h4>
+                </a>
+
+                <!--Fees btn link-->
+                <a href = "feecollection.html" class="active">
+                    <span class="material-symbols-sharp">payments</span>
+                    <h4>Fees</h4>
+                </a>
+
+                <!--Settings btn link-->
+                <a href = "#">
+                    <span class="material-symbols-sharp">settings</span>
+                    <h4>Settings</h4>
+                </a>
+
+                <!--Log out btn link-->
+                <a href = "index.html">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h4>Log Out</h4>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <!----------header section------------>
+            <div class="top">
+                <!---------page title--------------->
+                <div class="pagetitle">
+                    <h2 class="primary">Fees</h2>
+                </div>
+
+                <!----------search bar------------>
+                    <div class="search-bar">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <p>Search</p>
+                    </div>
+    
+                    <!---------top right section----------->
+                    <div class="top-right">
+                        <!--------menu icon------------>
+                        <div class="menu-btn">
+                            <span class="material-symbols-sharp">menu</span>
+                        </div>
+                        <!---------tutorial button------------>
+                        <div class="tutorial-button">
+                            <button> See Tutorial</button>
+                        </div>
+    
+                        <!------notification icon-------------->
+                        <div class="notification">
+                            <span class="material-symbols-sharp">notifications</span>
+                        </div>
+            
+                        <!--------profile picture icon----------->
+                        <div class="profile-picture">
+                            <img src="./images/profilepic.webp"/>
+                            <div class="text">
+                                <h5>Maarten Perera</h5>
+                                <small>Admin</small>
+                        </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!---------filters----------->
+            <div class="filters">
+
+                
+                <div class="filter-bar">
+                    <!--------search bar for table------->
+                    <div class="searchBarfees">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <p>Search a student, transaction or keyword</p>
+                    </div>
+
+                    <div class="filters">
+                        <!--------payment due filter-------->
+                    <div class="paymentDueFilter">
+                        <p>Payment Due</p>
+                        <input type="date" name="payment due date" class="filter">
+                    </div>
+
+                    <!--------payment method filter---------->
+                    <div class="payMethodFilter">
+                        <p>Payment Method</p>
+                        <select name="method" class="filter">
+                            <option value="All">All</option>
+                            <option value="card">Card</option>
+                            <option value="cash">Cash</option>
+                        </select>
+                    </div>
+
+                    <!---------status filter------------>
+                    <div class="statusFilter">
+                        <p>Status</p>
+                        <select name="status" class="filter">
+                            <option value="All">All</option>
+                            <option value="Fully Paid">Fully Paid</option>
+                            <option value="Partially Paid">Partially Paid</option>
+                            <option value="Not Paid">Not Paid</option>
+                        </select>
+                    </div>
+
+                </div>
+                </div>
+
+                
+            </div>
+
+            <!--results-->
+            <div class="results">
+                <p>Showing 8 of 4370 results</p>
+            </div>
+
+            
+                <!--Student details table-->
+            <div class="feetable">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th id="selectall"><label for="SelectAll"><input type="checkbox" name="">
+                                    Select All</Select></label></th>
+                                <th class="title">Transation ID</th>
+                                <th class="title">Student Name</th>
+                                <th class="title">Description</th>
+                                <th class="title">Payment Due</th>
+                                <th class="title">Payment Method</th>
+                                <th class="title">Amount</th>
+                                <th class="title">Status</th>
+                                <th class="title">Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="select" name=""></td>
+                                <td>T23785</td>
+                                <td>Budhdhima Arambepola</td>
+                                <td>Monthly Fee</td>
+                                <td>12/06/2023</td>
+                                <td>Card</td>
+                                <td>LKR 15 000</td>
+                                <td><p class="fullypaid">Fully Paid</p></td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>T23321</td>
+                                <td>Dilhan Perera</td>
+                                <td>Monthly Fee</td>
+                                <td>12/06/2023</td>
+                                <td>Card</td>
+                                <td>LKR 15 000</td>
+                                <td> <p class="partiallypaid">Partially Paid</p></td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>T23123</td>
+                                <td>Adriyan Jayasuriya</td>
+                                <td>Monthly Fee</td>
+                                <td>12/06/2023</td>
+                                <td>Cash</td>
+                                <td>LKR 20 000</td>
+                                <td> <p class="partiallypaid">Partially Paid</p></td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>T23836</td>
+                                <td>Pruthivi Chamath</td>
+                                <td>Monthly Fee</td>
+                                <td>12/06/2023</td>
+                                <td>Cash</td>
+                                <td>LKR 15 000</td>
+                                <td><p class="fullypaid">Fully Paid</p></td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>T23728</td>
+                                <td>Kawya Gangadari</td>
+                                <td>Monthly Fee</td>
+                                <td>12/06/2023</td>
+                                <td>Card</td>
+                                <td>LKR 15 000</td>
+                                <td><p class="fullypaid">Fully Paid</p></td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>T23395</td>
+                                <td>Laruni Gunathilake</td>
+                                <td>Monthly Fee</td>
+                                <td>12/06/2023</td>
+                                <td>Cash</td>
+                                <td>LKR 20 000</td>
+                                <td><p class="fullypaid">Fully Paid</p></td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>T23721</td>
+                                <td>chamini Hansini</td>
+                                <td>Monthly Fee</td>
+                                <td>12/06/2023</td>
+                                <td>Card</td>
+                                <td>LKR 15 000</td>
+                                <td><p class="notpaid">Not Paid</p></td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>T23798</td>
+                                <td>Vinuja Perera</td>
+                                <td>Monthly Fee</td>
+                                <td>12/06/2023</td>
+                                <td>Cash</td>
+                                <td>LKR 20 000</td>
+                                <td><p class="notpaid">Not Paid</p></td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+            </div>
+
+            <!---------pagination-------------->
+            <div class="pagination">
+                <div class="pages">
+                    <span class="material-symbols-sharp subtext">navigate_before</span>
+                    <p class="active">1</p>
+                    <p class="subtext">2</p>
+                    <p class="subtext">3</p>
+                    <p class="subtext">...</p>
+                    <p class="subtext">10</p>
+                    <span class="material-symbols-sharp">navigate_next</span>
+                </div>
+
+                <!--------go to page pagination------------>
+                <div class="gotopage">
+                    <p class="title">Go to page</p>
+                    <input type="text" name="navigate page" placeholder="1">
+                    <div class="go">
+                            <p class="primary">Go</p>
+                            <span class="material-symbols-sharp">navigate_next</span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

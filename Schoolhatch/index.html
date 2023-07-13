@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+
+    <!--material icon CDN-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet">
+    
+    <!--font awesome CDN-->
+    <link href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!--link style sheet-->
+    <link rel ="stylesheet" href="./style.css">
+
+    <!--script file-->
+    <script defer src="index.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="left-login">
+            <div class="logo">
+                <img src = "./images/mortarboard.png"/>
+                <h3 class = "primary">SchoolHatch</h3>
+            </div>
+
+            <!--------------------Log in fomr----------------------------->
+            <form action = "dashboard.html" name = "form" onsubmit = "return loginvalidation()">
+                <h2 class="primary">Log In</h2>
+                
+            <div class="inputs">
+                <!---------login email input------------>
+                <div class="email">
+                    <p>Email</p>
+                    <input type = "text" id = "email" placeholder = "example@gmail.com" name = "email">
+                    <p id = 'erroremail' class="error"></p>
+                </div>
+
+                <!-------------login password input ------------->
+                <div class="password">
+                    <p>Password</p>
+                    <input type = "password" id = "password" name = "password">
+                    <p id = 'errorpassword' class="error"></p>
+                </div>
+            </div>
+
+            <div class="options">
+                <!----------remember me check box-------------->
+                <div class="rememberMe">
+                    <input type="checkbox"> <label class="subtext">Remember me</label>
+                </div>
+
+                <!-----------forgot password link--------------->
+                <div class="forgot-password">
+                    <label><a class="primary" href="#"> Forgot password?</a></label>
+                </div>
+            </div>
+
+            <div class="login">
+                <!---------login button------------>
+                <input type="submit"  value="Log In" name="login" class="submit-button"/>
+            </div>
+            
+            
+            <div class="register-redirect">
+                <!---------redirect to register form-------------->
+                <p class="subtext">Doesn't have an account?</p>
+                <a class="primary" href="register.html">Register</a>
+            </div>
+
+        </form>
+        </div>
+
+        <div class="right">
+            <img src="./images/8196350.png">
+        </div>
+    </div>
+</body>
+</html>

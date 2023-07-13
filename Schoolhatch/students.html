@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+
+    <!--material icon CDN-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet">
+    
+    <!--font awesome CDN-->
+    <link href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!--link style sheet-->
+    <link rel ="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div class="containerStudents">
+        <aside>
+            <!--logo-->
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/mortarboard.png">
+                    <h1 class="primary">SchoolHatch</h1>
+                </div>
+
+                <div class="close">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>
+            <!--menu bar-->
+            <div class="sidebar">
+                <!--Dashboard btn link-->
+                <a href = "dashboard.html">
+                    <span class="material-symbols-sharp">dashboard</span>
+                    <h4>Dashboard</h4>
+                </a>
+                <!--Students btn link-->
+                <a href = "students.html"  class="active">
+                    <span class="material-symbols-sharp">school</span>
+                    <h4>Students</h4>
+                </a>
+
+                <!--Fees btn link-->
+                <a href = "feecollection.html">
+                    <span class="material-symbols-sharp">payments</span>
+                    <h4>Fees</h4>
+                </a>
+
+                <!--Settings btn link-->
+                <a hre = "#">
+                    <span class="material-symbols-sharp">settings</span>
+                    <h4>Settings</h4>
+                </a>
+
+                <!--Log out btn link-->
+                <a href = "index.html">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h4>Log Out</h4>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <!---header section-->
+            <div class="top">
+                <!----------menu icon---------->
+                <div class="menu-btn">
+                    <span class="material-symbols-sharp">menu</span>
+                </div>
+                <!--------page title---------->
+                <div class="pagetitle">
+                    <h2 class="primary">Students</h2>
+                </div>
+                <!------------search bar-------------->
+                    <div class="search-bar">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <p>Search</p>
+                    </div>
+    
+                    <div class="top-right">
+                        <!-------------tutorial button---------->
+                        <div class="tutorial-button">
+                            <button> See Tutorial</button>
+                        </div>
+    
+                        <!------notification icon--------->
+                        <div class="notification">
+                            <span class="material-symbols-sharp">notifications</span>
+                        </div>
+            
+                        <!----------profile picture icon---------->
+                        <div class="profile-picture">
+                            <img src="./images/profilepic.webp"/>
+                            <div class="text">
+                                <h5>Maarten Perera</h5>
+                                <small>Admin</small>
+                        </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            <div class="filters">
+
+
+                <!--------filters------------>
+                <div class="filter-bar">
+                    <div class="searchBar">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <p>Search a student</p>
+                    </div>
+
+                    <div class="filters">
+                    <!-----gender filter---------->
+                    <div class="genderFilter">
+                        <p>Gender</p>
+                        <select name="Gender" class="filter">
+                            <option value="All">All</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <!----------class filter---------->
+                    <div class="classFilter">
+                        <p>Class</p>
+                        <select name="Class" class="filter">
+                            <option value="All">All</option>
+                            <option value="9A">9A</option>
+                            <option value="9B">9B</option>
+                            <option value="9C">9B</option>
+                            <option value="9D">9D</option>
+                            <option value="10A">10A</option>
+                            <option value="10B">10B</option>
+                            <option value="10C">10C</option>
+                        </select>
+                    </div>
+
+                    <!--------city filter------------>
+                    <div class="cityFilter">
+                        <p>City</p>
+                        <select name="City" class="filter">
+                            <option value="All">All</option>
+                            <option value="Kelaniya">Kelaniya</option>
+                            <option value="Colombo">Colombo</option>
+                            <option value="Homagama">Homagama</option>
+                            <option value="Negombo">Negombo</option>
+                            <option value="Ja-Ela">Ja-Ela</option>
+                        </select>
+                    </div>
+
+                    <!------------register date filter------------------>
+                    <div class="registerDateFilter">
+                        <p>Register Date</p>
+                        <input type="date" name="Register Date" class="filter">
+                    </div>
+
+                    <!-----------new student register button------------>
+                    <div class="registerStudent">
+                        <a href="registerstudent.html" class="button">Register a student</a>
+                    </div>
+                </div>
+                </div>
+
+                
+            </div>
+            <div class="results">
+                <p>Showing 7 of 2430 results</p>
+            </div>
+
+            
+                <!--Student details table-->
+            <div class="studenttable">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th id="selectall"><label for="SelectAll"><input type="checkbox" name="">
+                                    Select All</Select></label></th>
+                                <th class="title">Student ID</th>
+                                <th class="title">Name</th>
+                                <th class="title">Class</th>
+                                <th class="title">Gender</th>
+                                <th class="title">Phone</th>
+                                <th class="title">City</th>
+                                <th class="title">Register Date</th>
+                                <th class="title">Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="select" name=""></td>
+                                <td>ST23785</td>
+                                <td>Budhdhima Arambepola</td>
+                                <td>9 A</td>
+                                <td>Male</td>
+                                <td>077 43 84 645</td>
+                                <td>Kelaniya</td>
+                                <td>12/01/2005</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>ST23321</td>
+                                <td>Dilhan Perera</td>
+                                <td>10 B</td>
+                                <td>Male</td>
+                                <td>076 34 82 921</td>
+                                <td>Kelaniya</td>
+                                <td>13/01/2003</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>ST23123</td>
+                                <td>Adriyan Jayasuriya</td>
+                                <td>12 D</td>
+                                <td>Male</td>
+                                <td>071 32 82 231</td>
+                                <td>Negombo</td>
+                                <td>12/01/2005</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>ST23836</td>
+                                <td>Pruthivi Chamath</td>
+                                <td>4 D</td>
+                                <td>Male</td>
+                                <td>076 34 28 921</td>
+                                <td>Negombo</td>
+                                <td>12/01/2003</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>ST23728</td>
+                                <td>Kawya Gangadari</td>
+                                <td>9 A</td>
+                                <td>Female</td>
+                                <td>077 32 28 921</td>
+                                <td>Homagama</td>
+                                <td>12/01/2005</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>ST23395</td>
+                                <td>Laruni Gunathilake</td>
+                                <td>9 A</td>
+                                <td>Female</td>
+                                <td>077 43 84 284</td>
+                                <td>Homagama</td>
+                                <td>24/04/2001</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>ST23721</td>
+                                <td>chamini Hansini</td>
+                                <td>10 B</td>
+                                <td>Female</td>
+                                <td>076 78 82 921</td>
+                                <td>Homagama</td>
+                                <td>12/01/2002</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" name="select"></td>
+                                <td>ST23798</td>
+                                <td>Vinuja Perera</td>
+                                <td>12 D</td>
+                                <td>Male</td>
+                                <td>077 32 82 231</td>
+                                <td>Homagama</td>
+                                <td>12/01/2005</td>
+                                <td><span><i class="fa-solid fa-ellipsis-vertical"></i></span></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+            </div>
+
+            <!-------pagination------------>
+            <div class="pagination">
+                <div class="pages">
+                    <span class="material-symbols-sharp subtext">navigate_before</span>
+                    <p class="active">1</p>
+                    <p class="subtext">2</p>
+                    <p class="subtext">3</p>
+                    <p class="subtext">...</p>
+                    <p class="subtext">10</p>
+                    <span class="material-symbols-sharp">navigate_next</span>
+                </div>
+
+                <!-------go to page pagination section----------->
+                <div class="gotopage">
+                    <p class="title">Go to page</p>
+                    <input type="text" name="navigate page" placeholder="1">
+                    <div class="go">
+                            <p class="primary">Go</p>
+                            <span class="material-symbols-sharp">navigate_next</span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>
